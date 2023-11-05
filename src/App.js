@@ -1,5 +1,5 @@
 import React , {useState} from "react";
-import Question from './Question'
+import SingleQuestion from './Question'
 import data from './data'
 
 function App() {
@@ -11,7 +11,9 @@ function App() {
           <h1 className="text-lg font-bold">Questions And Answers About Login</h1>
         </div>
         <div>
-
+          {questions.map((question)=>{
+            return <SingleQuestion key={question.id} {...question}/>
+          })}
         </div>
       </div>
    </div>
